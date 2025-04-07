@@ -8,5 +8,8 @@ inputs:
     default: 'Steve'
 
 runs:
-  using: 'node20'
-  main: 'index.js'
+  using: 'composite'
+  steps:
+    - name: "Greeting"
+      run: echo "Hello World, ${{ inputs.author }} !"
+      shell: bash
