@@ -1,0 +1,12 @@
+name: Build and test workflow
+inputs:
+  author:
+    type: string
+    required: false
+    default: 'Steve'
+
+runs:
+  steps:
+    - name: Output Hello World
+      run: echo "Hello World, ${{ inputs.author }} action"
+      shell: bash
